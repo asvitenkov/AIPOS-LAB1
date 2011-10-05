@@ -26,4 +26,4 @@ private:
 
 };
 
-#endif // STATUSBARWORK_H
+#endif 
