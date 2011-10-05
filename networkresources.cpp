@@ -45,6 +45,7 @@ void NetworkResources::displayResource(int i, LPNETRESOURCE lpnrLocal){
     //            break;
     case (RESOURCEDISPLAYTYPE_DOMAIN):
         //printf("domain\n");
+        // бнр рср хглемемн
         lastDomain = createTreeWidgetItem(lpnrLocal,1);
         lastServer = NULL;
         lastShare = NULL;
@@ -87,6 +88,7 @@ void NetworkResources::displayResource(int i, LPNETRESOURCE lpnrLocal){
         break;
     case (RESOURCEDISPLAYTYPE_NETWORK):
         //printf("network\n");
+        // бнр рср хглемемн
         lastNetwork = createTreeWidgetItem(lpnrLocal,6);
         emit sendTreeWidgetItemSignal(lastNetwork);
         break;
@@ -230,6 +232,7 @@ BOOL WINAPI NetworkResources::EnumerateFunc(LPNETRESOURCE lpnr)
 }
 
 void NetworkResources::errorHandler(DWORD errorCode, QString dsc){
+    // бнр рср хглемемн
     return;
     qDebug()<<"in errorHandler with error "<<QString::number(errorCode)<<endl;
     DWORD dwWNetResult, dwLastError;
